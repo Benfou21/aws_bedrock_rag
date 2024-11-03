@@ -6,7 +6,7 @@ Création de l'agent avec des actions :
 --> première fois : Création rapide d’une fonction Lambda - recommandé
 --> enregistrer 
 --> fonction : Tableau, nom : get_kpi_1
---> Paramètres : ticker ;id to get the info from api; string;True
+--> Paramètres : ticker ;id to get the info from api; string;True   (dans les tests de la lambda fct le paramètre doit être un ticker "AAPL" et non "Apple", hors lorsqu'on essaye de prompte l'agent avec "Accenture" ou "Apple", il renvoi bien "ACN" et "AAPL" aux fonctions-> le LLM (claude 3) comprend alors qu'il faut passer de "Accenture" a ACN, mais pour des entreprise moins connu il ne le fera pas ex "EMP".
 
 --> cliquer sur afficher dans selection de la fonction Lambda
 --> ajouter la logique du code (puis deploy)
@@ -23,3 +23,14 @@ Création de l'agent avec des actions :
 --> Créer fonction pour analyse sentimentale
 
 --> Créer interface
+
+
+
+
+Multi - Prompt 
+
+-> Avis macro économique
+-> analyse f
+-> Elément clés
+-> Analyse S
+-> graphique

@@ -83,5 +83,5 @@ def get_rapport(ticker):
     return df_8k, df_10k
 
 
-# print(get_info(ticker))
+print(get_info(ticker))
 # print(get_rapport(ticker)[0])

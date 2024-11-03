@@ -12,8 +12,8 @@ Création de l'agent avec des actions :
 --> ajouter la logique du code (puis deploy)
 
 -Ajouter Couche :
---> créer une couche dans  Lambda > couches (ARN pandas : https://api.klayers.cloud/api/v2/p3.11/layers/latest/us-west-2/json) , (personalisé : pip install yfinance -t python/ puis zip )
-
+--> créer une couche dans  Lambda > couches (ARN pandas : https://github.com/keithrozario/Klayers/tree/master/deployments/python3.12 -> arn:aws:lambda:us-west-2:770693421928:layer:Klayers-p312-pandas:10) , (personalisé : pip install yfinance -t python/ puis zip )
+---> Attention : ordre des couches nécessaires : (1) pandas_yf_layer , (2) arn pandas : supposions que la version de pandas dans la couche perso n'est pas compatible avec yf, donc la couche arn de pandas overwright celle de pandas perso
 -> pour voir les logs : CloudWatch > groupes de journaux > api-kpi-actions
 
 

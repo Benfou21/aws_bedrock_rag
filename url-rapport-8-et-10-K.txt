@@ -1,0 +1,17 @@
+appel
+10-K
+https://cdn.yahoofinance.com/prod/sec-filings/0000320193/000032019323000106/aapl-20230930.html
+8-K
+https://cdn.yahoofinance.com/prod/sec-filings/0000320193/000032019324000120/aapl-20241031.htm
+
+3M 
+10-K
+https://cdn.yahoofinance.com/prod/sec-filings/0000066740/000006674024000016/mmm-20231231.htm
+8-K
+https://cdn.yahoofinance.com/prod/sec-filings/0000066740/000006674024000098/mmm-20241022.htm
+
+Airbnb
+10-K
+https://cdn.yahoofinance.com/prod/sec-filings/0001559720/000155972024000006/abnb-20231231.htm
+8-K
+https://cdn.yahoofinance.com/prod/sec-filings/0001559720/000119312524157426/d841286d8k.htm

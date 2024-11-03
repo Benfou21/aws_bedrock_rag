@@ -1,8 +1,10 @@
 import yfinance as yf
 import pandas as pd
+from datetime import datetime
 
-ticker = yf.Ticker("EMP")
+ticker = yf.Ticker("AAPL")
 
+#get basic informations if you want to see a firm.
 def get_info(ticker):
     info = ticker.info
     indicators = {
@@ -42,10 +44,38 @@ def get_info(ticker):
     df = pd.DataFrame(list(indicators.items()), columns=["Indicator", "Value"])
     return df
 
-
+#show news
 def get_major_news(ticker):
-    pass
+    news = ticker.news
+    data = []
+    for item in news:
+        title = item.get('title')
+        link = item.get('link')
+        source = item.get('publisher')
+        # Convertir le timestamp Unix en format lisible
+        publish_time = datetime.fromtimestamp(item.get('providerPublishTime')).strftime('%Y-%m-%d %H:%M:%S')
+        
+        # Ajouter les informations dans un dictionnaire
+        data.append({
+            'Title': title,
+            'Link': link,
+            'Source': source,
+            'Publish Time': publish_time
+        })
+    
+    # Convertir la liste en DataFrame
+    df = pd.DataFrame(data)
+    return df
 
+
+#show income statement
+def get_income_statement(ticker):
+    income_statement = ticker.income_stmt
+    return pd.DataFrame(income_statement)
+
+
+
+#sec fillings
 def get_rapport(ticker):
     # Récupérer les informations des rapports
     info_sec = ticker.sec_filings
@@ -83,5 +113,14 @@ def get_rapport(ticker):
     return df_8k, df_10k
 
 
-# print(get_info(ticker))
-# print(get_rapport(ticker)[0])
+def get_sp500_list():
+    url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+    sp500_table = pd.read_html(url, header=0)[0]
+    
+    sp500_table = sp500_table.drop(columns=['Headquarters Location', 'Date added'])
+    
+    return sp500_table
+
+
+print(get_income_statement(ticker))
+
